@@ -11,8 +11,8 @@ import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import Gallery from "../components/gallery"
-
-// import Query from '../components/query'
+import Forms from "../components/forms"
+import Container from '../components/container'
 
 import { DefaultSeo } from 'next-seo';
 
@@ -33,6 +33,7 @@ import { DefaultSeo } from 'next-seo';
 export default function Home() {
   return (
     <>
+    
     <DefaultSeo
       title="AI Masters"
       description="AI Masters User Interfacing"
@@ -50,6 +51,7 @@ export default function Home() {
       
       />
       <link rel="icon" href="/favicon.ico" />
+      
       <Navbar />
       <Hero />
       <SectionTitle
@@ -72,7 +74,9 @@ export default function Home() {
         ac sem consequat iaculis quis nec tellus.
       </SectionTitle>
       <Faq />
+      <Forms />
       <Cta />
+
       <Footer />
     </>
   );

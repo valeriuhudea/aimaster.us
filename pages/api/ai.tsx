@@ -1,3 +1,4 @@
+import { assert } from "console";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 interface aiRequest extends NextApiRequest {
@@ -13,12 +14,9 @@ export default async function handler(req: aiRequest, res: NextApiResponse) {
   
     if(reqData) {
         try {
-            var urls = []
-            var urlsData = []
-            Object.keys(reqData).forEach(async function(key, index) {
-                reqData[key][0].forEach(rslt => urls.push(rslt.link))
-            })
-            return res.status(200).json({ ai: urls });
+            const masterData = reqData
+            console.log(masterData)
+            return res.status(200).json({ ai: "urls" });
         } catch(e){
             console.log(e)
         }

@@ -10,6 +10,9 @@ module.exports = {
       colors: {
         trueGray: colors.trueGray,
       },
+      backgroundImage: (theme) => ({
+        hero: "url('../public/img/hero.webp')",
+      }),
     },
     fontFamily: {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
