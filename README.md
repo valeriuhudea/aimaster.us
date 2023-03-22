@@ -1,17 +1,17 @@
-# Media Content Romania with Next.js & Tailwind CSS
+#
 
 ## How to use
 
 ### 1\. Clone this Repository
 
 ```bash
-git clone https://github.com/valeriuhudea/mediacontent-dev.git
+git clone https://github.com/valeriuhudea/aimasters.git
 ```
 
 ### 2\. Navigate to the directory
 
 ```
-cd mediacontent-dev
+cd aimasters
 ```
 
 ### 3\. Install dependencies
