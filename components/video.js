@@ -10,7 +10,9 @@ export default function Video() {
           onClick={() => setPlayVideo(!playVideo)}
           className="relative bg-transparent cursor-pointer aspect-w-16 aspect-h-9">
           {!playVideo && (
-            <button className="absolute inset-auto w-16 h-16 text-white transform -translate-x-1/2 -translate-y-1/2 lg:w-28 lg:h-28 top-1/2 left-1/2">
+            <button className="absolute inset-auto w-16 h-16 text-white transform -translate-x-1/2 -translate-y-1/2 lg:w-28 lg:h-28 top-1/2 left-1/2 overflow-hidden group">
+              <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-6 bg-red-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+              <span class="relative text-red-600 transition duration-300 group-hover:text-white ease">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-16 h-16  lg:w-28 lg:h-28"
@@ -22,6 +24,7 @@ export default function Video() {
                   clipRule="evenodd"
                 />
               </svg>
+              </span>
               <span className="sr-only">Play Video</span>
             </button>
           )}

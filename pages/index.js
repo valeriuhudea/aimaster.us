@@ -31,6 +31,7 @@ import { DefaultSeo } from 'next-seo';
 // const PopupWidget = dynamic(() => import("../components/popupWidget"));
 
 export default function Home() {
+  
   return (
     <>
     

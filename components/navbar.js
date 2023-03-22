@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import { Disclosure } from "@headlessui/react";
+import { useState, useEffect } from "react"
 
 export default function Navbar() {
   const navigation = [
@@ -9,10 +10,25 @@ export default function Navbar() {
     "Documentation",
     "Showroom",
   ];
-
-  return (
-    <div className="w-full">
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
+  const [navSize, setnavSize] = useState("10rem");
+  const [navColor, setnavColor] = useState("transparent");
+  const listenScrollEvent = () => {
+    window.scrollY > 10 ? setnavColor("#252734") : setnavColor("transparent");
+    window.scrollY > 10 ? setnavSize("7rem") : setnavSize("10rem");
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent);
+    };
+  }, []);
+  //<div className={`w-full bg-[length:2000px_1280px] bg-circuit border-b-2 border-cyan-900 bg-slate-700 sticky ${visible ? 'top-0' : ''} `}>
+  return (        
+    <div className="w-full bg-[length:2000px_1280px] bg-circuit border-b-2 border-cyan-900 bg-slate-700 sticky top-0">
+      <nav style={{
+      height: navSize,
+      transition: "all 1s"
+    }} className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
         {/* Logo  */}
         <Disclosure>
           {({ open }) => (
@@ -64,9 +80,9 @@ export default function Navbar() {
                         </a>
                       </Link>
                     ))}
-                    <Link href="/">
+                    <Link href="https://hudea.okta.com/">
                       <a className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5">
-                        Contact
+                        Sign Up
                       </a>
                     </Link>
                   </>
@@ -78,7 +94,7 @@ export default function Navbar() {
 
         {/* menu  */}
         <div className="hidden text-center lg:flex lg:items-center">
-          <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
+          <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex ">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
                 <Link href="/">
@@ -90,14 +106,19 @@ export default function Navbar() {
             ))}
           </ul>
         </div>
-
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link href="/">
-            <a className="px-6 py-2 text-white bg-blue-700 rounded-md md:ml-5">
-              Contact
-            </a>
+          <Link href="https://hudea.okta.com/">
+          <a className="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group">
+          <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
+          <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
+          <span className="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
+          <span className="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
+          <span className="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"></span>
+          <span className="relative transition-colors duration-300 delay-200 group-hover:text-white ease">
+            Sign Up
+            </span>
+          </a>
           </Link>
-
           <ThemeChanger />
         </div>
       </nav>

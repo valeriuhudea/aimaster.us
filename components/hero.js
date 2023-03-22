@@ -5,7 +5,7 @@ import heroImg from "../public/img/masters.gif";
 export default function Hero() {
   return (
     <> 
-    <div class="w-full h-screen bg-center bg-cover bg-hero">
+    <div class="w-full h-screen bg-center bg-cover bg-hero ">
       <Container className="flex flex-wrap ">
         <div className="flex items-center ">
           <div className="max-w-2xl mb-8">
@@ -18,16 +18,26 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
+              <a href="#_" className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-indigo-600 border-2 border-indigo-600 rounded-full hover:text-white group hover:bg-gray-50">
+          <span className="absolute left-0 block w-full h-0 transition-all bg-indigo-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+          <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+          <svg
+                  role="img"
+                  width="16"
+                  height="16"
+                  className="w-11 h-11"
+                  viewBox="0 0 24 24"
+                  fill="#1c87c9"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <title>AI</title>
+                  <path d="M8.35593,5H7.01119L5,13H6.028l.46375-1.87537H8.808L9.25993,13h1.06232ZM6.62716,10.32227,7.644,5.949h.04541l.98316,4.3733ZM11.23838,13V5h1v8Zm.18685,1H4V4H14V8.77924a5.50408,5.50408,0,0,1,4-.78486V6H16V4a2.00587,2.00587,0,0,0-2-2H12V0H10V2H8V0H6V2H4A2.00587,2.00587,0,0,0,2,4V6H0V8H2v2H0v2H2v2a2.00591,2.00591,0,0,0,2,2H6v2H8V16h2v2h2V16.00787A5.547,5.547,0,0,1,11.42523,14ZM13.5,13.5A3.5,3.5,0,1,1,17,17,3.499,3.499,0,0,1,13.5,13.5ZM17,19c-2.33625,0-7,1.1725-7,3.5V24H24V22.5C24,20.1725,19.33625,19,17,19Z" />
+                </svg>
+          </span>
+          <span class="relative">Demo</span>
+          </a>
               <a
                 href="/ai"
                 target=""
-                rel="noopener"
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md ">
-                Demo
-              </a>
-              <a
-                href="https://www.youtube.com/@insta360/videos"
-                target="_blank"
                 rel="noopener"
                 className="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
                 <svg
@@ -35,13 +45,13 @@ export default function Hero() {
                   width="16"
                   height="16"
                   className="w-11 h-11"
-                  viewBox="0 0 16 16"
-                  fill="red"
+                  viewBox="0 0 24 24"
+                  fill="#1c87c9"
                   xmlns="http://www.w3.org/2000/svg">
-                  <title>Youtube</title>
-                  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                  <title>AI</title>
+                  <path d="M8.35593,5H7.01119L5,13H6.028l.46375-1.87537H8.808L9.25993,13h1.06232ZM6.62716,10.32227,7.644,5.949h.04541l.98316,4.3733ZM11.23838,13V5h1v8Zm.18685,1H4V4H14V8.77924a5.50408,5.50408,0,0,1,4-.78486V6H16V4a2.00587,2.00587,0,0,0-2-2H12V0H10V2H8V0H6V2H4A2.00587,2.00587,0,0,0,2,4V6H0V8H2v2H0v2H2v2a2.00591,2.00591,0,0,0,2,2H6v2H8V16h2v2h2V16.00787A5.547,5.547,0,0,1,11.42523,14ZM13.5,13.5A3.5,3.5,0,1,1,17,17,3.499,3.499,0,0,1,13.5,13.5ZM17,19c-2.33625,0-7,1.1725-7,3.5V24H24V22.5C24,20.1725,19.33625,19,17,19Z" />
                 </svg>
-                <span>AI</span>
+                <span>Demo AI</span>
               </a>
             </div>
           </div>

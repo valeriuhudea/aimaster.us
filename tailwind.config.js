@@ -11,7 +11,9 @@ module.exports = {
         trueGray: colors.trueGray,
       },
       backgroundImage: (theme) => ({
-        hero: "url('../public/img/hero.webp')",
+        hero: "url('../public/img/bc4.png')",
+        circuit: "url('../public/img/circuit.gif')",
+        test: "url('../public/img/mk.jpg')",
       }),
     },
     fontFamily: {
