@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import Input from "./Input";
+import Input from "./input";
 
 function Forms() {
     const [formValues, setFormValues] = useState([]);
